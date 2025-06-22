@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, #1d1d1d 0%, #9c9a9d 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+}
+
+.profile-card {
+    background: rgba(77, 74, 74, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.profile-top {
+    height: 150px;
+    width: 400px;
+    background-image: url("./spectre2.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.profile-image{
+     background-image: url("./profile.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid rgba(77, 74, 74, 0.95);
+    position: absolute;
+    bottom: 0;
+    left: 22%;
+    transform: translate(-50%, 0%);
+}
+
+.brand {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(11, 11, 11, 0.3);
+    
+}
+
+.profile-section {
+    padding: 0 30px;
+    text-align: center;
+    transform: translateY(-30px);
+}
+
+.profile-image {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.title {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 400;
+}
+
+.social-links {
+    padding: 0 30px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.social-links::-webkit-scrollbar {
+    width: 6px;
+}
+
+.social-links::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.social-links::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.social-links::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    background: #f8f9fa;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.social-link .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link .icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Couleurs spécifiques pour chaque réseau social */
+.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    border-color: #e91e63;
+}
+
+.whatsapp:hover {
+    background: #25d366;
+    color: white;
+    border-color: #25d366;
+}
+
+
+
+.email:hover {
+    background: #ea4335;
+    color: white;
+    border-color: #ea4335;
+}
+
+.telegram:hover {
+    background: #0088cc;
+    color: white;
+    border-color: #0088cc;
+}
+
+.footer-message {
+    padding: 0 30px 30px;
+    text-align: center;
+}
+
+.footer-message p {
+    color: #539995;
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .profile-card {
+        border-radius: 20px;
+    }
+    
+    .header {
+        padding: 30px 15px 50px;
+    }
+    
+    .brand {
+        font-size: 2rem;
+    }
+    
+    .profile-section {
+        padding: 0 20px;
+    }
+    
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .name {
+        font-size: 1.3rem;
+    }
+    
+    .social-links {
+        padding: 0 20px 20px;
+        gap: 10px;
+        max-height: 350px;
+    }
+    
+    .social-link {
+        padding: 14px 16px;
+        border-radius: 14px;
+    }
+    
+    .footer-message {
+        padding: 0 20px 20px;
+    }
+}
+
+/* Loading animation */
+.profile-card * {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.profile-card *:nth-child(1) { animation-delay: 0.1s; }
+.profile-card *:nth-child(2) { animation-delay: 0.2s; }
+.profile-card *:nth-child(3) { animation-delay: 0.3s; }
+.profile-card *:nth-child(4) { animation-delay: 0.4s; }
+.profile-card *:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover effects for the entire card */
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Subtle pulse animation for the profile image */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    50% {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 0 0 8px rgba(30, 60, 114, 0.1);
+    }
+}
+
+.profile-image img {
+    animation: pulse 3s infinite;
+}
